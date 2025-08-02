@@ -16,4 +16,4 @@ dependencyResolutionManagement {
 }
 
 include(":app")
-rootProject.name = "Kotlin Android Template"
+rootProject.name = "DocumentsUI Shortcut"
