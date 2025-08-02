@@ -8,6 +8,17 @@
 # disable obfuscation
 -dontobfuscate
 
+# remove kotlin null checks
+-assumenosideeffects class kotlin.jvm.internal.Intrinsics {
+    static void checkNotNull(...);
+    static void checkExpressionValueIsNotNull(...);
+    static void checkNotNullExpressionValue(...);
+    static void checkReturnedValueIsNotNull(...);
+    static void checkFieldIsNotNull(...);
+    static void checkParameterIsNotNull(...);
+    static void checkNotNullParameter(...);
+}
+
 # If your project uses WebView with JS, uncomment the following
 # and specify the fully qualified class name to the JavaScript interface
 # class:
@@ -17,7 +28,7 @@
 
 # Uncomment this to preserve the line number information for
 # debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+-keepattributes SourceFile,LineNumberTable
 
 # If you keep the line number information, uncomment this to
 # hide the original source file name.

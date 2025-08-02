@@ -8,7 +8,7 @@ plugins {
     kotlin("android")
 }
 
-val packageName = "rocka.template"
+val packageName = "rocka.documentsuishortcut"
 
 kotlin {
     compilerOptions {
@@ -25,8 +25,8 @@ android {
         applicationId = packageName
         minSdk = 26
         targetSdk = 35
-        versionCode = 1
-        versionName = "0.0.1"
+        versionCode = 10
+        versionName = "0.1.0"
     }
 
     buildTypes {
@@ -48,17 +48,9 @@ android {
         }
     }
 
-    buildFeatures {
-        viewBinding = true
-    }
-
     androidResources {
         @Suppress("UnstableApiUsage")
         generateLocaleConfig = true
-    }
-
-    compileOptions {
-        isCoreLibraryDesugaringEnabled = true
     }
 
     dependenciesInfo {
@@ -93,5 +85,4 @@ tasks.withType<PackageApplication> {
 }
 
 dependencies {
-    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")
 }
